@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c4ah8l6s3ln5d"]
+
+[ext_resource type="Texture2D" uid="uid://2drx4jbxueip" path="res://Asset/sprites/platforms.png" id="1_6hhsq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqge4"]
+size = Vector2(32, 9)
+
+[node name="platforms grass" type="AnimatableBody2D"]
+
+[node name="Platforms" type="Sprite2D" parent="."]
+position = Vector2(502, 247)
+texture = ExtResource("1_6hhsq")
+region_enabled = true
+region_rect = Rect2(16.01247, -0.16892433, 32.031498, 9.511595)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(502, 246.5)
+shape = SubResource("RectangleShape2D_lqge4")
+one_way_collision = true

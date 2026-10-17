@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cb7j4eb6j1qw2"]
+
+[sub_resource type="Curve" id="Curve_8e3xk"]
+_data = [Vector2(0.07185629, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.566322, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_71ux5"]
+curve = SubResource("Curve_8e3xk")
+
+[sub_resource type="Gradient" id="Gradient_e8g65"]
+offsets = PackedFloat32Array(0.4833887, 0.7591362)
+colors = PackedColorArray(1, 1, 1, 0.42352942, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1oal0"]
+gradient = SubResource("Gradient_e8g65")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_lgeg1"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(3, 2, 1)
+emission_shape = 3
+emission_box_extents = Vector3(500, 200, 500)
+orbit_velocity_min = -0.0029999053
+orbit_velocity_max = 0.010000096
+gravity = Vector3(0, 98, 0)
+scale_min = 0.0
+scale_max = 4.21
+color_initial_ramp = SubResource("GradientTexture1D_1oal0")
+alpha_curve = SubResource("CurveTexture_71ux5")
+turbulence_enabled = true
+turbulence_noise_speed_random = 0.0
+turbulence_influence_min = 0.020000001
+turbulence_influence_max = 0.080000006
+
+[node name="Snow" type="GPUParticles2D" unique_id=933076089]
+amount = 210
+lifetime = 4.109999999999999
+preprocess = 30.0
+process_material = SubResource("ParticleProcessMaterial_lgeg1")

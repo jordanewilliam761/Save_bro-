@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cyaw33ylkn8vn"]
+
+[ext_resource type="Texture2D" uid="uid://2drx4jbxueip" path="res://Asset/sprites/platforms.png" id="1_abgu1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ckd5y"]
+size = Vector2(31.5, 8)
+
+[node name="sand long platform" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_abgu1")
+region_enabled = true
+region_rect = Rect2(15, 15, 33, 11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.25, -1)
+shape = SubResource("RectangleShape2D_ckd5y")
+one_way_collision = true

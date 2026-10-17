@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bwp8qubag7i3"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3yy65"]
+load_path = "res://.godot/imported/platforms.png-828da665a6e2becc93d86a1d3898827b.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_odnis"]
+size = Vector2(31.5, 8)
+
+[node name="Snow_long_platform" type="AnimatableBody2D" unique_id=1095306510]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1428280965]
+texture = SubResource("CompressedTexture2D_3yy65")
+region_enabled = true
+region_rect = Rect2(16, 48, 32, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=702635136]
+position = Vector2(0.25, -1)
+shape = SubResource("RectangleShape2D_odnis")
+one_way_collision = true

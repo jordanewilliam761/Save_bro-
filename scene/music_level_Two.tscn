@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bdwhfjftfyngv"]
+
+[ext_resource type="AudioStream" uid="uid://bxcne5jkvwfli" path="res://Asset/music/desert song.mp3" id="1_16yeb"]
+
+[node name="music" type="Node2D"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_16yeb")
+autoplay = true

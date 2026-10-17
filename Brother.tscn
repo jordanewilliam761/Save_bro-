@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://nrti5fqxiywj"]
+
+[ext_resource type="Texture2D" uid="uid://b3x651rm870c8" path="res://Asset/sprites/brother charatesr-export.png" id="1_3lrxr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rdebp"]
+atlas = ExtResource("1_3lrxr")
+region = Rect2(5, 1, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_heesr"]
+atlas = ExtResource("1_3lrxr")
+region = Rect2(37, 1, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yoyic"]
+atlas = ExtResource("1_3lrxr")
+region = Rect2(69, 1, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kibyj"]
+atlas = ExtResource("1_3lrxr")
+region = Rect2(101, 1, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cumc"]
+atlas = ExtResource("1_3lrxr")
+region = Rect2(133, 1, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xujqj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rdebp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_heesr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yoyic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kibyj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cumc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2jvv"]
+size = Vector2(10, 20)
+
+[node name="Brother" type="Node2D" unique_id=2111520938]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=870105098]
+position = Vector2(-11.999999, 1.9999996)
+scale = Vector2(0.625, 0.625)
+sprite_frames = SubResource("SpriteFrames_xujqj")
+autoplay = "default"
+frame_progress = 0.039375935
+flip_h = true
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="AnimatedSprite2D" unique_id=1116552347]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/CharacterBody2D" unique_id=274582617]
+position = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_f2jvv")

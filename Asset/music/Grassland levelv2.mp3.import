@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b87d6okixyvbm"
+path="res://.godot/imported/Grassland levelv2.mp3-d4c2131d449ac5be55819ca8a76ad0cb.mp3str"
+
+[deps]
+
+source_file="res://Asset/music/Grassland levelv2.mp3"
+dest_files=["res://.godot/imported/Grassland levelv2.mp3-d4c2131d449ac5be55819ca8a76ad0cb.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
